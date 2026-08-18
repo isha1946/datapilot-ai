@@ -1,6 +1,13 @@
 import './App.css'
 
 function App() {
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="app">
 
@@ -12,12 +19,16 @@ function App() {
         </div>
 
         <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#product">Product</a>
+          <button onClick={() => scrollToSection('features')}>Features</button>
+          <button onClick={() => scrollToSection('how-it-works')}>How it works</button>
+          <button onClick={() => scrollToSection('product')}>Product</button>
         </div>
-
-        <button className="nav-button">Get Started</button>
+      <button
+      className="nav-button"
+      onClick={() => scrollToSection('product')}
+      >
+      Get Started
+     </button>
       </nav>
 
 
