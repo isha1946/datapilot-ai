@@ -53,13 +53,18 @@ function App() {
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-button">
-              Start Exploring →
-            </button>
-
-            <button className="secondary-button">
-              See how it works
-            </button>
+            <button
+  className="primary-button"
+  onClick={() => scrollToSection('product')}
+>
+  Start Exploring →
+</button>
+<button
+  className="secondary-button"
+  onClick={() => scrollToSection('how-it-works')}
+>
+  See how it works
+</button>
           </div>
 
           <div className="hero-note">
@@ -558,9 +563,12 @@ function App() {
           Explore a smarter way to understand your data.
         </p>
 
-        <button className="primary-button">
-          Start Exploring →
-        </button>
+        <button
+        className="primary-button"
+        onClick={() => scrollToSection('product')}
+        >
+        Start Exploring →
+       </button>
 
       </section>
 
